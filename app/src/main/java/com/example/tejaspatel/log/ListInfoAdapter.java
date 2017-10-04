@@ -133,6 +133,7 @@ public class ListInfoAdapter extends ArrayAdapter<ListInfo> {
                 Intent intent = new Intent(context,userProfile.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("userId",listInfo.getUserid());
+                //Log.i("Op ad",""+listInfo.getUserid());
                 context.startActivity(intent);
 
             }

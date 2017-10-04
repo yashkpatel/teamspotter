@@ -20,5 +20,6 @@ public class URLs {
     public static final String URL_ACCEPT_REQUEST = ROOT_URL + "/accept_request.php";
     public static final String URL_EDIT_USER = ROOT_URL + "/edit_user.php";
     public static final String URL_USER_PROFILE = ROOT_URL + "/user_profile.php";
+    public static final String URL_RATE_USER = ROOT_URL + "/rate_user.php";
 
 }
