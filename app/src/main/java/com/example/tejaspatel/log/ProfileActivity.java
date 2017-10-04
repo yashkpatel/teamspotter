@@ -60,9 +60,9 @@ public class ProfileActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(mViewPager);
 
         tabLayout.getTabAt(0).setIcon(R.mipmap.ic_post);
-        tabLayout.getTabAt(1).setIcon(R.mipmap.ic_post);
-        tabLayout.getTabAt(2).setIcon(R.mipmap.ic_post);
-        tabLayout.getTabAt(3).setIcon(R.mipmap.ic_post);
+        tabLayout.getTabAt(1).setIcon(R.mipmap.ic_img_request);
+        tabLayout.getTabAt(2).setIcon(R.mipmap.ic_date);
+        tabLayout.getTabAt(3).setIcon(R.mipmap.ic_img_user);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
