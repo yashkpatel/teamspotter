@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -51,9 +53,25 @@ public class send extends AppCompatActivity {
     String dateSelected;
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         Bundle bun = getIntent().getExtras();
         userid = "" + bun.getInt("ID");
         Log.i("UserId:", userid);
@@ -93,7 +111,7 @@ public class send extends AppCompatActivity {
 
                                 date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year1);
 
-                                dateSelected = year1+"-"+monthOfYear+"-"+dayOfMonth;
+                                dateSelected = year1 + "-" + monthOfYear + "-" + dayOfMonth;
                             }
                         }, year, month, day);
 
@@ -247,7 +265,7 @@ public class send extends AppCompatActivity {
                         params.put("locationname", locationame);
                         params.put("sportname", sportname);
                         params.put("playerneed", pneed);
-                        params.put("date",dateSelected);
+                        params.put("date", dateSelected);
                         Log.i("listttttttttt:", tname + userid + locationame + sportname + pneed);
 
                         //returing the response
