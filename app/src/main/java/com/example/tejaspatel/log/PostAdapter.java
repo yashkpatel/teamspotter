@@ -188,6 +188,7 @@ public class PostAdapter extends ArrayAdapter<PostInfo> {
 
 
 
+
         return view;
     }
 }

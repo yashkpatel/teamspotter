@@ -92,7 +92,8 @@ public class Pending extends Fragment {
                             String locationname=team.getString("locationname");
                             String status=team.getString("status");
                             int need=team.getInt("need");
-                            String monthName= team.getString("monthname");
+                            String monthName="MAY";
+                            monthName= team.getString("monthname");
                             int day= team.getInt("day");
                             String date= ""+day+" "+monthName;
 
@@ -131,11 +132,7 @@ public class Pending extends Fragment {
         UserLogin ul = new UserLogin();
         ul.execute();
 
-        if(pends.isEmpty()){
-            Log.i("my bad3:","help me");
-        }else{
-            Log.i("my bad3:","got it");
-        }
+
 
 
         return rootView;

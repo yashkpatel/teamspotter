@@ -7,6 +7,7 @@ import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class PendingAdapter extends ArrayAdapter<PendingInfo> {
         TextView date= (TextView) view.findViewById(R.id.time);
         date.setText(postInfo.getDate());
 
+        Log.i("list request",username.getText().toString()+" "+detail.getText().toString()+" "+need.getText().toString()+" "+date.getText().toString());
         Button accept=(Button) view.findViewById(R.id.accept);
         if(postInfo.getStatus().equals("2")){
             accept.setText("ACCEPTED");
@@ -84,18 +86,6 @@ public class PendingAdapter extends ArrayAdapter<PendingInfo> {
                 Intent intent = new Intent(context,userProfile.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 intent.putExtra("userId",userid);
-                context.startActivity(intent);
-
-            }
-        });
-
-        username = (TextView)view.findViewById(R.id.txt_user);
-        username.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context,userProfile.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("userId",postInfo.getUserid());
                 context.startActivity(intent);
 
             }
