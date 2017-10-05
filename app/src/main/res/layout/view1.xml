@@ -10,9 +10,11 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:divider="#ffffff"
-        android:dividerHeight="1dp"
+        android:dividerHeight="7dp"
         android:layout_margin="5dp"
-
+        android:padding="4dp"
+        android:background="#F5F5F5"
+        android:elevation="4dp"
         />
 
 </RelativeLayout>
