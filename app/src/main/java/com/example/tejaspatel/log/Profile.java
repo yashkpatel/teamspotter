@@ -98,10 +98,10 @@ public class Profile extends Fragment {
 
                         int accept1=user.getInt("accept");
                         int send1=user.getInt("send");
-                        int avg=user.getInt("avgRating");
+                        double avg=user.getDouble("avgRating");
                         textViewCreated.setText(""+accept1);
                         textViewJoined.setText(""+send1);
-                        rate.setNumStars(avg);
+                        rate.setRating(Float.parseFloat(""+avg));
 
 
                     } else {
