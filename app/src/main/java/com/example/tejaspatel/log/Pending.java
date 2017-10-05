@@ -32,7 +32,7 @@ public class Pending extends Fragment {
     ArrayList<PendingInfo> pends;
     PendingAdapter postAdapter;
     String userid;
-    TextView username;
+    //TextView username;
     Activity context;           //yash
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +45,7 @@ public class Pending extends Fragment {
 
         pends = new ArrayList<PendingInfo>();
 
-        username = (TextView)rootView.findViewById(R.id.txt_user);          //yash
+       // username = (TextView)rootView.findViewById(R.id.txt_user);          //yash
 
         /*username.setOnClickListener(new View.OnClickListener() {            //yash
             @Override
