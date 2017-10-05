@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -61,6 +62,32 @@ public class PendingAdapter extends ArrayAdapter<PendingInfo> {
 
         TextView date= (TextView) view.findViewById(R.id.time);
         date.setText(postInfo.getDate());
+
+        //sport image
+        ImageView sportimg=(ImageView)view.findViewById(R.id.sportimg2);
+        String sportname=postInfo.getSportname();
+
+        if(sportname.equals("CRICKET")){
+            sportimg.setImageResource(R.drawable.cricket);
+        }
+        else  if(sportname.equals("FOOTBALL")){
+            sportimg.setImageResource(R.drawable.football);
+        }
+        else  if(sportname.equals("TT")){
+            sportimg.setImageResource(R.drawable.tt);
+        }
+        else  if(sportname.equals("BASKETBALL")){
+            sportimg.setImageResource(R.drawable.basketball);
+        }
+        else  if(sportname.equals("HOCKEY")){
+            sportimg.setImageResource(R.drawable.hockey);
+        }
+        else  if(sportname.equals("BADMINTON")){
+            sportimg.setImageResource(R.drawable.badminton);
+        }
+        else  if(sportname.equals("VOLLEYBALL")){
+            sportimg.setImageResource(R.drawable.volleyball);
+        }
 
         Log.i("list request",username.getText().toString()+" "+detail.getText().toString()+" "+need.getText().toString()+" "+date.getText().toString());
         Button accept=(Button) view.findViewById(R.id.accept);
