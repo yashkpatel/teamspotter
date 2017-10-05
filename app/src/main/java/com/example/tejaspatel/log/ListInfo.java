@@ -13,8 +13,9 @@ public class ListInfo {
     private String userName;
     private String gameName;
     private String date;
+    private boolean disable;
 
-    public ListInfo(int id, int userid,String userName,String gameName,String locationname,int need, String date){
+    public ListInfo(int id, int userid,String userName,String gameName,String locationname,int need, String date, boolean disable){
         //this.imgURL=imgURL;
         this.id=id;
         this.userid=userid;
@@ -23,11 +24,16 @@ public class ListInfo {
         this.userName=userName;
         this.gameName=gameName;
         this.date=date;
+        this.disable=disable;
     }
 //    public String getImgURL(){
 //        return imgURL;
 //    }
 
+
+    public boolean isDisable() {
+        return disable;
+    }
 
     public String getDate() {
         return date;

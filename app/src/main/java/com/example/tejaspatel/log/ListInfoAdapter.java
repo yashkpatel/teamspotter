@@ -62,6 +62,9 @@ public class ListInfoAdapter extends ArrayAdapter<ListInfo> {
         date.setText(listInfo.getDate());
 
         final Button send=(Button) view.findViewById(R.id.send);
+        if (listInfo.isDisable()){
+            send.setEnabled(false);
+        }
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

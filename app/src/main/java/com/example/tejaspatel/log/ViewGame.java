@@ -79,9 +79,10 @@ public class ViewGame extends Fragment{
                             int pneed= team.getInt("playerneed ");
                             String monthName= team.getString("monthname");
                             int day= team.getInt("day");
+                            boolean disable=team.getBoolean("disable");
                             String date= ""+day+" "+monthName;
                             Log.i("json :",""+id+" "+sp+" "+uname+" "+lname);
-                            listInfo.add(new ListInfo(id, userid, uname,sp,lname,pneed, date));
+                            listInfo.add(new ListInfo(id, userid, uname,sp,lname,pneed, date, disable));
                             Log.i("json :",""+id+" "+sp+" "+uname+" "+lname);
 
                         }
