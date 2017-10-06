@@ -142,6 +142,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tv_time"
                 android:text="Event Date"
+                android:gravity="center"
                 android:textStyle="bold"/>
 
             <TextView
@@ -153,8 +154,8 @@
                 android:layout_below="@+id/tv_time"
                 android:layout_height="wrap_content"
                 android:layout_width="100dp"
-                android:gravity="top"
-                android:layout_gravity="center"
+                android:gravity="center"
+
 
                 />
         </RelativeLayout>
